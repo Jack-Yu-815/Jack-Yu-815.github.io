@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.addEventListener("scroll", function (event) {
         let offsetY = window.scrollY;
         window.navHeight = document.querySelector("nav").offsetHeight;
-        if(offsetY >= 0) {
-            document.querySelector("nav").style.top = offsetY.toString()+"px";
+        if (offsetY >= 0) {
+            document.querySelector("nav").style.top = offsetY.toString() + "px";
         }
     });
 
@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
  * @param {Event} event - the event object
  */
 function updateColorScheme(event) {
-
-    if(matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (matchMedia("(prefers-color-scheme: dark)").matches) {
         window.logoUrl = "resource/jack_logo_blue.png";
         window.logoSelectedUrl = "resource/jack_logo_black.png";
         document.getElementById("brand-logo").src = logoUrl;
