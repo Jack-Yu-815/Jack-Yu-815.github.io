@@ -21,7 +21,7 @@ body nav {
 .navbar-brand {
     display: flex;
     align-items: center;
-    text-shadow: 3px 2px 2px grey;
+    text-shadow: 3px 2px 2px var(--logo-shadow-color);
 }
 
 #brand-logo {
@@ -71,6 +71,7 @@ body nav {
         --body-bg: #d1f1f2;
         --navbar-text-color: black;
         --body-text-color: #363636;
+        --logo-shadow-color: grey;
     }
 }
 
@@ -80,6 +81,7 @@ body nav {
         --body-bg: #090b13;
         --navbar-text-color: #0a53be;
         --body-text-color: #363636;
+        --logo-shadow-color: #232323;
     }
 }
 

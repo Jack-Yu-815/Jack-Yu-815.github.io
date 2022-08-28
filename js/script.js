@@ -24,6 +24,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     );
 
+    // clicking on navigation button changes page content
+    document.getElementById("contact").addEventListener("click", function (event) {
+        // TODO: make HTTPRequest to load the contact page snippet.
+        document.querySelector(".home-content").innerHTML =
+            "<h2> You can reach me at <a href='mailto: jackyu0815@gmail.com'>jackyu0815@gmail.com</a></h2>" +
+            "<h3>I value your feedback and suggestion.</h3>"
+        let prevActiveElement = document.querySelector(".active.nav-link");
+        let prevActiveClassString = prevActiveElement.className;
+        prevActiveClassString = prevActiveClassString.replace(new RegExp("active", "g"), "");
+        prevActiveElement.className = prevActiveClassString;
+        prevActiveElement.removeAttribute("aria-current");
+        this.className += " active";
+        this.setAttribute("aria-current", "page");
+    })
+
     // change color scheme when user changed color scheme preference
     window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", updateColorScheme);
 });
