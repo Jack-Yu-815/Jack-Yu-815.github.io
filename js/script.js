@@ -101,6 +101,7 @@ function insertHtml(selector, html) {
  * @param {string} sourceUrl
  */
 function insertScript(sourceUrl) {
+    // borrowed from: https://thewebdev.info/2022/04/28/how-to-run-script-elements-inserted-with-innerhtml-with-javascript/
     const script = document.createElement("script");
     script.setAttribute("src", sourceUrl);
     document.body.appendChild(script);
