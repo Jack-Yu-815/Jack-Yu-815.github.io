@@ -2,6 +2,24 @@
     box-sizing: border-box;
 }
 
+/* define color variables */
+:root {
+    --header-bg: #69abce;
+    --body-bg: #d1f1f2;
+    --navbar-text-color: black;
+    --body-text-color: #363636;
+    --logo-shadow-color: grey;
+}
+
+/* dark mode color themes. Only applied when :root also has a dark-mode class. */
+:root.dark-mode {
+    --header-bg: #1a255b;
+    --body-bg: #090b13;
+    --navbar-text-color: #0a53be;
+    --body-text-color: #363636;
+    --logo-shadow-color: #232323;
+}
+
 
 /* Header Starts */
 body {
@@ -39,13 +57,13 @@ body nav {
     margin: 2px;
 }
 
-.navbar-brand > p {
+#brand-text {
     font-size: 160%;
     color: var(--navbar-text-color);
-    margin: 10px;
+    margin: 0 10px 0 10px;
 }
 
-.navbar-brand > p:hover {
+.navbar-brand:hover > #brand-text {
     color: var(--body-bg);
 }
 
@@ -54,6 +72,11 @@ body nav {
     #brand-logo {
         height: 4em;
         width: 4em;
+    }
+
+    #brand-text {
+        /* to align logo and navbar menu text */
+        margin: 10px;
     }
 }
 
@@ -66,27 +89,15 @@ body nav {
 
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --header-bg: #69abce;
-        --body-bg: #d1f1f2;
-        --navbar-text-color: black;
-        --body-text-color: #363636;
-        --logo-shadow-color: grey;
-    }
+
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --header-bg: #1a255b;
-        --body-bg: #090b13;
-        --navbar-text-color: #0a53be;
-        --body-text-color: #363636;
-        --logo-shadow-color: #232323;
-    }
+
 }
 
 /* main content begins */
-.home-content {
+.main-content {
     background-color: var(--body-bg);
     padding: 5px;
     text-align: center;
