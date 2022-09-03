@@ -33,16 +33,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
      */
     function setUpButton(elementId, pageUrl, targetSelector, jsUrls = []) {
         document.getElementById(elementId).addEventListener("click", function (event) {
-            // $ajaxUtils.sendGetRequest(pageUrl,
-            //     function (html) {
-            //         insertHtml(targetSelector, html);
-            //         console.log(jsUrls);
-            //         for (let i = 0; i < jsUrls.length; i++) {
-            //             insertScript(jsUrls[i]);
-            //         }
-            //     },
-            //     false);
-            // reassignActiveClass(this);
             loadPage(pageUrl, targetSelector, jsUrls);
             reassignActiveClass(this);
         });

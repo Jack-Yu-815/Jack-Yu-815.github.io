@@ -16,7 +16,7 @@
     --header-bg: #1a255b;
     --body-bg: #090b13;
     --navbar-text-color: #0a53be;
-    --body-text-color: #363636;
+    --body-text-color: #DCDCDC;
     --logo-shadow-color: #232323;
 }
 
@@ -24,6 +24,7 @@
 /* Header Starts */
 body {
     background-color: var(--body-bg);
+    color: var(--body-text-color);
 }
 
 body nav {
@@ -83,6 +84,7 @@ body nav {
 .nav-link:hover, .nav-link.active {
     background-color: var(--body-bg);
     color: var(--navbar-text-color) !important;
+    border-radius: 5px;
 }
 
 /* Header Ends */
